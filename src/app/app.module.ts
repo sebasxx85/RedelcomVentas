@@ -6,6 +6,7 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ContenidoComponent } from './componentes/contenido/contenido.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
     InicioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
