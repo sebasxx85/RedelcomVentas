@@ -13,6 +13,8 @@ import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ContactoFormularioComponent } from './componentes/contacto-formulario/contacto-formulario.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
+import { PaginacionComponent } from './componentes/paginacion/paginacion.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { IngresarComponent } from './componentes/ingresar/ingresar.component';
     ComprarComponent,
     HomeComponent,
     ContactoFormularioComponent,
-    IngresarComponent
+    IngresarComponent,
+    PaginacionComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,14 @@ import { HomeComponent } from './componentes/home/home.component';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { ContactoFormularioComponent } from './componentes/contacto-formulario/contacto-formulario.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'terminales', component: TerminalesComponent},
   { path: 'comprar', component: ComprarComponent},
+  { path: 'carrito', component: CarritoComponent},
   { path: 'contacto', component: ContactoFormularioComponent},
   { path: 'ingresar', component: IngresarComponent},
   { path: '**', redirectTo: '/home' }
