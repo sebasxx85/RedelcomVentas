@@ -121,7 +121,7 @@ h4 {
 }
 
 .pie {
-    background-color: #0dcaf0;;
+    font-size: x-large;
     border-color: #0dcaf0;;
     border-radius: 15px;
     font-style: italic;
@@ -245,6 +245,7 @@ h4 {
 
 
 .foot {
+    font-size: x-large;
     grid-area: foot;
     background-color: #b7f00d;
     border: 1px solid rgb(0, 0, 0);

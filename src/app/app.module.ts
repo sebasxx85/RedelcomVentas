@@ -7,6 +7,12 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ContenidoComponent } from './componentes/contenido/contenido.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TerminalesComponent } from './componentes/terminales/terminales.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ComprarComponent } from './componentes/comprar/comprar.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { ContactoFormularioComponent } from './componentes/contacto-formulario/contacto-formulario.component';
+import { IngresarComponent } from './componentes/ingresar/ingresar.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +21,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     FooterComponent,
     ContenidoComponent,
-    InicioComponent
+    InicioComponent,
+    TerminalesComponent,
+    ComprarComponent,
+    HomeComponent,
+    ContactoFormularioComponent,
+    IngresarComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
