@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cards } from 'src/app/Models/Cards';
+import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
   selector: 'app-terminales',
@@ -12,29 +13,41 @@ export class TerminalesComponent implements OnInit {
 
   }
 
-  cards: Cards[] = [
+  terminales2: Terminales[] = [
     {
+      id: 1,
+      nombre: "Terminal Basico",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      title: 'Terminal1',
-      description: 'Descripcion Terminal1'
+      stock: 30,
+      precioTerminal: 97500,
+      descripcion: 'Descripcion Terminal Basico'
 
     },
     {
+      id: 2,
+      nombre: "Terminal 2",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      title: 'Terminal2',
-      description: 'Descripcion Terminal2'
+      stock: 10,
+      precioTerminal: 87500,
+      descripcion: 'Descripcion Terminal 2'
 
     },
     {
+      id: 3,
+      nombre: "Terminal 3",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      title: 'Terminal3',
-      description: 'Descripcion Terminal3'
+      stock: 25,
+      precioTerminal: 57500,
+      descripcion: 'Descripcion Terminal 3'
 
     },
     {
+      id: 4,
+      nombre: "Terminal 5",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      title: 'Terminal4',
-      description: 'Descripcion Terminal4'
+      stock: 40,
+      precioTerminal: 27500,
+      descripcion: 'Descripcion Terminal 5'
 
     }
   ]

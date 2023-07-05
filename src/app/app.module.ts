@@ -15,6 +15,9 @@ import { ContactoFormularioComponent } from './componentes/contacto-formulario/c
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
 import { PaginacionComponent } from './componentes/paginacion/paginacion.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
+import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.component';
+import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
+import { PromocionesComponent } from './componentes/promociones/promociones.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
     ContactoFormularioComponent,
     IngresarComponent,
     PaginacionComponent,
-    CarritoComponent
+    CarritoComponent,
+    CrearCuentaComponent,
+    RecuperarPasswordComponent,
+    PromocionesComponent
   ],
   imports: [
     BrowserModule,

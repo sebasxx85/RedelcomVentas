@@ -16,22 +16,24 @@
           <a class="nav-link enlaces " routerLink='/terminales'>Terminales de Pago</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link enlaces" routerLink='/comprar'>Comprar</a>
+          <a class="nav-link enlaces" routerLink='/promociones'>Promociones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link enlaces" routerLink='/contacto'>Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link enlaces" routerLink='/ingresar'>Ingresar Portal</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Portal</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink='/ingresar'>Ingresar</a>
+            <a class="dropdown-item" routerLink='/crear-cuenta'>Crear Cuenta</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink='/recuperar-password'>Recuperar Contraseña</a>
+          </div>
         </li>
-        <li class="nav-item ">
-          <a class="nav-item" routerLink='/carrito'><span
-              class="material-icons md-36 icono">shopping_cart </span></a>
-        </li>
-
       </ul>
       <form class="d-flex">
-
+        <a class="nav-item" routerLink='/comprar'><span
+          class="material-icons md-36 icono">shopping_cart </span></a>
       </form>
     </div>
   </div>

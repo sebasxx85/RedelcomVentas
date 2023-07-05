@@ -5,13 +5,14 @@
 <h2 class="text-center subtitulos">Destacados</h2>
 <div class="container margen">
   <div class="row">
-    <div class="col-md-3" *ngFor="let card of cards">
+    <div class="col-md-3" *ngFor="let terminal of terminales2">
       <div class="card ">
-        <h5 class="card-title">{{ card.title }}</h5>
-        <img [src]="card.image" class="card-img-top" alt="Card Image">
+        <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
+        <img [src]="terminal.image" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          <p class="card-text">{{ card.description }}</p>
-          <button type="button" class="btn btn-outline-success btn-lg">Agregar Carrito</button>
+          <h3 class="card-text">{{ '$'+ terminal.precioTerminal }} - {{'stock:  ' + terminal.stock }}</h3>
+          <p class="card-text">{{ terminal.descripcion }}</p>
+          <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
          
         </div>
       </div>
@@ -22,12 +23,13 @@
 <h2 class="text-center subtitulos">Ofertas</h2>
 <div class="container margen">
   <div class="row">
-    <div class="col-md-3" *ngFor="let card of cards">
+    <div class="col-md-3" *ngFor="let terminal of terminales2">
       <div class="card ">
-        <h5 class="card-title">{{ card.title }}</h5>
-        <img [src]="card.image" class="card-img-top" alt="Card Image">
+        <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
+        <img [src]="terminal.image" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          <p class="card-text">{{ card.description }}</p>
+          <h3 class="card-text">{{ '$'+ terminal.precioTerminal }} - {{'stock:  ' + terminal.stock }}</h3>
+          <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
         </div>
       </div>

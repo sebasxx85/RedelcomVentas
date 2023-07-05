@@ -1,4 +1,53 @@
-
 <app-cabecera></app-cabecera>
-<p>contacto-formulario works!</p>
+<form>
+    <fieldset>
+        <h2 class="row justify-content-center contactt">Contactanos</h2>
+
+        <div class="container formulario">
+            <div class="row justify-content-center">
+                <!--Ajustar tamanio form-->
+                <div class="col-md-5">
+
+                    <div class="form-group mb-2">
+                        <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="exampleTextarea" class="form-label mt-4">Comentario</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="formFile" class="form-label mt-4">Selecione un archivo</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <fieldset class="form-group">
+                        <legend class="mt-4 mb-3">Selecione una Opcion</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1"
+                                value="option1" checked="">
+                            <label class="form-check-label" for="optionsRadios1">
+                                Santiago
+                            </label>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="optionsRadios2">
+                                Regiones
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary justify-content-center">Enviar</button>
+                </div>
+            </div>
+          
+        </div>
+    </fieldset>
+</form>
 <app-footer></app-footer>
