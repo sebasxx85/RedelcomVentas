@@ -18,38 +18,77 @@ export class TerminalesComponent implements OnInit {
    terminales2: Array<Terminales> = [
     {
       id: 1,
-      nombre: "Terminal Basico",
+      nombre: "Terminal R3",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 27,
-      precioTerminal: 97500,
-      descripcion: 'Descripcion Terminal Basico'
+      stock: 47,
+      precioTerminal: 99000,
+      descripcion: 'Descripcion Terminal R3'
 
     },
     {
       id: 2,
-      nombre: "Terminal 2",
+      nombre: "Terminal R3",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 10,
-      precioTerminal: 87500,
-      descripcion: 'Descripcion Terminal 2'
+      stock: 15,
+      precioTerminal: 87000,
+      descripcion: 'Descripcion Terminal R3'
 
     },
     {
       id: 3,
-      nombre: "Terminal 3",
+      nombre: "Terminal R3",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
       stock: 25,
-      precioTerminal: 57500,
-      descripcion: 'Descripcion Terminal 3'
+      precioTerminal: 97000,
+      descripcion: 'Descripcion Terminal R3'
+
+    },
+    {
+      id: 7,
+      nombre: "Terminal R3",
+      image: 'https://redelcomventas.com/img/posLogo.jpg',
+      stock: 8,
+      precioTerminal: 99500,
+      descripcion: 'Descripcion Terminal R3'
+
+    }
+  ]
+
+  terminalesMini: Array<Terminales> = [
+    {
+      id: 1,
+      nombre: "Terminal Mini",
+      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
+      stock: 27,
+      precioTerminal: 19500,
+      descripcion: 'Descripcion Terminal Mini'
+
+    },
+    {
+      id: 2,
+      nombre: "Terminal Mini",
+      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
+      stock: 10,
+      precioTerminal: 17000,
+      descripcion: 'Descripcion Terminal Mini'
+
+    },
+    {
+      id: 3,
+      nombre: "Terminal Mini",
+      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
+      stock: 19,
+      precioTerminal: 17500,
+      descripcion: 'Descripcion Terminal Mini'
 
     },
     {
       id: 4,
-      nombre: "Terminal 5",
-      image: 'https://redelcomventas.com/img/posLogo.jpg',
+      nombre: "Terminal Mini",
+      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
       stock: 4,
-      precioTerminal: 27500,
-      descripcion: 'Descripcion Terminal 5'
+      precioTerminal: 18000,
+      descripcion: 'Descripcion Terminal Mini'
 
     }
   ]

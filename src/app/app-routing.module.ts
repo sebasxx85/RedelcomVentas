@@ -4,7 +4,6 @@ import { TerminalesComponent } from './componentes/terminales/terminales.compone
 import { HomeComponent } from './componentes/home/home.component';
 import { ContactoFormularioComponent } from './componentes/contacto-formulario/contacto-formulario.component';
 import { IngresarComponent } from './componentes/ingresar/ingresar.component';
-import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.component';
 import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
