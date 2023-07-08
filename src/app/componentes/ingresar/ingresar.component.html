@@ -15,17 +15,20 @@
             <form>
               <div class="mb-3">
                 <label for="username" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su usuario">
+                <!--Uso de ng model-->
+                <input type="text" class="form-control" id="username" name="username" 
+                placeholder="Ingrese su usuario" [(ngModel)] = "usuario">
+                
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña">
               </div>
               <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-            </form>
-
-          </div>
+            </form>         
+          </div>     
         </div>
+         <p class="justify-content-center">Bienvenido a Nuestro Sitio: {{usuario}}</p>
       </div>
     </div>
   </div>

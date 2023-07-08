@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
@@ -6,7 +6,9 @@ import { Terminales } from 'src/app/Models/Terminales';
   templateUrl: './comprar.component.html',
   styleUrls: ['./comprar.component.css']
 })
-export class ComprarComponent {
+export class ComprarComponent  implements OnInit {
+
+  fecha: Date = new Date()
 
 //Precio Terminales
 terminales: Terminales[] = [
@@ -55,6 +57,10 @@ IVA: number = 0.19;
 
 constructor() {
   this.Precio = this.terminales[3].precioTerminal
+}
+
+ngOnInit(): void {
+
 }
 
 retornarValorTotal(){

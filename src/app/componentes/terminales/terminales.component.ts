@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cards } from 'src/app/Models/Cards';
 import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
@@ -8,17 +7,20 @@ import { Terminales } from 'src/app/Models/Terminales';
   styleUrls: ['./terminales.component.css']
 })
 export class TerminalesComponent implements OnInit {
+
+  
   
   constructor() {
 
   }
 
-  terminales2: Terminales[] = [
+   //terminales2: Terminales[] = [ otra forma de colocar array de terminales
+   terminales2: Array<Terminales> = [
     {
       id: 1,
       nombre: "Terminal Basico",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 30,
+      stock: 27,
       precioTerminal: 97500,
       descripcion: 'Descripcion Terminal Basico'
 
@@ -45,7 +47,7 @@ export class TerminalesComponent implements OnInit {
       id: 4,
       nombre: "Terminal 5",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 40,
+      stock: 4,
       precioTerminal: 27500,
       descripcion: 'Descripcion Terminal 5'
 

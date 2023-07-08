@@ -10,7 +10,11 @@
         <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
         <img [src]="terminal.image" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          <h3 class="card-text">{{ '$'+ terminal.precioTerminal }} - {{'stock:  ' + terminal.stock }}</h3>
+
+          <h3 class="card-text">{{ 'Precio: $'+ terminal.precioTerminal }}</h3>
+          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock:  ' + terminal.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
+
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
          
@@ -28,7 +32,11 @@
         <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
         <img [src]="terminal.image" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          <h3 class="card-text">{{ '$'+ terminal.precioTerminal }} - {{'stock:  ' + terminal.stock }}</h3>
+          
+          <h3 class="card-text">{{ 'Precio: $'+ terminal.precioTerminal }}</h3>
+          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock:  ' + terminal.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
+
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
         </div>

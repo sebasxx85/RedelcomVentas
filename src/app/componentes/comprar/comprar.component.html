@@ -26,6 +26,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">TOTAL: ${{retornarValorTotal()}}</li>
             </ul>
+            <p class="text-end date" >{{ fecha | date: 'dd/MM/yyyy HH:mm'}}</p>
             <div class="card-body">
                 <button type="button" class="btn btn-primary botones" (click)="pagar()">Pagar</button>
                 

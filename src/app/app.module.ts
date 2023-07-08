@@ -18,6 +18,7 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.component';
 import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PromocionesComponent } from './componentes/promociones/promociones.comp
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
