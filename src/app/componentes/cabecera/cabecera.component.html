@@ -30,13 +30,13 @@
             <a class="dropdown-item" routerLink='/recuperar-password'>Recuperar Contraseña</a>
           </div>
         </li>
+          
       </ul>
-      <form class="d-flex">
-      <!--  <a class="dropdown-item" routerLink='' ngModel="usuario">{{usuario}}</a> -->
-        <a class="dropdown-item" >{{usuarioHijo}}</a>
-        <a class="nav-item" routerLink='/comprar'><span
-          class="material-icons md-36 icono">shopping_cart </span></a>
-      </form>
+    
+     <app-carrito
+     [usuarioHijoCarrito]="usuarioHijo" 
+     ></app-carrito>
+
     </div>
   </div>
 </nav>

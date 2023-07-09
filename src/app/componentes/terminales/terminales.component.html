@@ -1,11 +1,11 @@
-<app-cabecera></app-cabecera>
+<app-cabecera ></app-cabecera>
 
 <h1 class="text-center titulos">TERMINALES</h1>
 
 <h2 class="text-center subtitulos">Destacados</h2>
 <div class="container margen">
   <div class="row">
-    <div class="col-md-3" *ngFor="let terminal of terminales2">
+    <div class="col-md-3" *ngFor="let terminal of terminalesR3">
       <div class="card ">
         <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
         <img [src]="terminal.image" class="card-img-top" alt="Card Image">
@@ -16,7 +16,7 @@
           <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
 
           <p class="card-text">{{ terminal.descripcion }}</p>
-          <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success" (click)="eventoComprar()">Agregar Carrito</button>
          
         </div>
       </div>
@@ -38,7 +38,8 @@
           <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
 
           <p class="card-text">{{ terminal.descripcion }}</p>
-          <button type="button" class="btn btn-outline-success">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success" (click)="eventoComprar()">Agregar Carrito</button>
+          
         </div>
       </div>
     </div>

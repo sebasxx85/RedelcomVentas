@@ -19,6 +19,7 @@ import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.co
 import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
 import { FormsModule } from '@angular/forms';
+import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     CarritoComponent,
     CrearCuentaComponent,
     RecuperarPasswordComponent,
-    PromocionesComponent
+    PromocionesComponent,
+    ProcesarPagoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,9 @@
 
-<app-cabecera [usuarioHijo]="usuarioPadre" [funcionSaludar]="funcionSaludarPadre"></app-cabecera>
+<app-cabecera 
+[usuarioHijo]="usuarioPadre" 
+[funcionSaludar]="funcionSaludarPadre"
+(eventoSalida)="manejarEventoSalida($event)"
+></app-cabecera>
 
 <h1 class="titulo text-center">Ingresar</h1>
 
@@ -29,6 +33,7 @@
             </form>   
             <div class="crear justify-content-center">
               <a class="" routerLink='/crear-cuenta'>Crear Cuenta</a> 
+              <p>{{mensajeSalida}}</p>
             </div>
             
           </div>    

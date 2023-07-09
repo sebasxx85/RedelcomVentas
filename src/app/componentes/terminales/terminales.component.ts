@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
@@ -8,14 +9,14 @@ import { Terminales } from 'src/app/Models/Terminales';
 })
 export class TerminalesComponent implements OnInit {
 
-  
-  
-  constructor() {
+//agregar router al constructor para usar navigate y redirigir
+  constructor(private router: Router) { }
 
-  }
+  ngOnInit(): void {}
+
 
    //terminales2: Terminales[] = [ otra forma de colocar array de terminales
-   terminales2: Array<Terminales> = [
+   terminalesR3: Array<Terminales> = [
     {
       id: 1,
       nombre: "Terminal R3",
@@ -93,9 +94,14 @@ export class TerminalesComponent implements OnInit {
     }
   ]
 
-
-  ngOnInit(): void {
+  eventoComprar(){
+    setTimeout(() => {
+      this.router.navigate(['/comprar']);
+    }, 1500);
+    
 
   }
+
+
 
 }

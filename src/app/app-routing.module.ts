@@ -8,18 +8,21 @@ import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.co
 import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
+import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'terminales', component: TerminalesComponent},
   { path: 'comprar', component: ComprarComponent},
-  { path: 'carrito', component: ComprarComponent},
+  { path: 'carrito', component: CarritoComponent},
   { path: 'promociones', component: PromocionesComponent},
   { path: 'contacto', component: ContactoFormularioComponent},
   { path: 'ingresar', component: IngresarComponent},
   { path: 'crear-cuenta', component: CrearCuentaComponent},
   { path: 'recuperar-password', component: RecuperarPasswordComponent},
+  { path: 'procesar-pago', component: ProcesarPagoComponent},
   { path: '**', redirectTo: '/home' }
 
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
   selector: 'app-carrito',
@@ -8,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 
 export class CarritoComponent  implements OnInit {
 
+  //recibimos el arreglo de comp terminales (padre)
+   @Input() TerminalesR3!: Terminales[]
+
+    //Obtener el input desde componenete padre cabecera quien a su vez obtiene de comp ingrear
+   @Input() usuarioHijoCarrito!: string;
+
   constructor(){}
   
   ngOnInit(): void {
     
   } 
+
+  clicCarrito(){
+    alert("has agregado N items al carrito")
+  }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
 
 @Component({
@@ -8,7 +9,7 @@ import { Terminales } from 'src/app/Models/Terminales';
 })
 export class ComprarComponent  implements OnInit {
 
-  fecha: Date = new Date()
+fecha: Date = new Date()
 
 //Precio Terminales
 terminales: Terminales[] = [
@@ -55,13 +56,16 @@ TOTAL!: number
 IVA: number = 0.19;
 
 
-constructor() {
+//agregar router al constructor para usar navigate y redirigir
+constructor(private router: Router) {
   this.Precio = this.terminales[3].precioTerminal
 }
 
 ngOnInit(): void {
 
 }
+
+//metodos evento click
 
 retornarValorTotal(){
   let precioTerminal = (this.terminales[3].precioTerminal) * (1 + this.IVA)
@@ -74,8 +78,16 @@ retornarIVA(){
 
 }
 
+seguirComprando() {
+  setTimeout(() => {
+    this.router.navigate(['/terminales']);
+  }, 1500);
+
+}
+
  pagar(){
     alert("el valor a pagar es: $" + this.retornarValorTotal())
+    this.router.navigate(['/procesar-pago']);
  }
 
 }
