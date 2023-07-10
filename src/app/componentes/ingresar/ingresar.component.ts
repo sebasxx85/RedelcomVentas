@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-ingresar',
@@ -27,9 +28,17 @@ export class IngresarComponent implements OnInit {
 
   manejoIngresar(){
     if (this.usuarioPadre != "" && this.passwordPadre != "" ) {
-      alert("Ingreso correcto")
+      Swal.fire({
+        icon: 'success',
+        title: 'Genial!...',
+        text: 'Has ingresado correctamente',
+      })
     } else {
-      alert("Ingreso Incorrecto")
+      Swal.fire({
+        icon: 'error',
+        title: 'Ups!...',
+        text: 'Algo ha salido mal',
+      })
     }
     //colocar redirecion portal
     

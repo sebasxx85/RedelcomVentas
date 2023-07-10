@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-inicio',
@@ -19,16 +20,23 @@ export class InicioComponent implements OnInit{
 
 
   BotonComprar(){
-    alert("Haz agregado el item al carrito de compras")
-     //usar un nav para renviar a comprar
-     this.router.navigate(['/comprar']);
 
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se ha agregado el Producto al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
   BotonConsultar(){
-    alert("Nos pondremos en contacto contigo")
+    Swal.fire({title: 'Envianos un formulario de Contacto', timer: 1900 })
+
     //usar un nav para renviar al formulario
-    this.router.navigate(['/contacto']);
+    setTimeout(() => {
+      this.router.navigate(['/contacto']);
+    }, 2000);
   }
 
 }

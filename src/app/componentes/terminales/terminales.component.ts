@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-terminales',
@@ -95,9 +96,19 @@ export class TerminalesComponent implements OnInit {
   ]
 
   eventoComprar(){
+
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se ha agregado el Producto al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+
+
     setTimeout(() => {
       this.router.navigate(['/comprar']);
-    }, 1500);
+    }, 2000);
     
 
   }

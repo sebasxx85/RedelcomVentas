@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-comprar',
@@ -86,8 +87,21 @@ seguirComprando() {
 }
 
  pagar(){
-    alert("el valor a pagar es: $" + this.retornarValorTotal())
-    this.router.navigate(['/procesar-pago']);
+
+  Swal.fire({
+    title: "El valor TOTAL a pagar es de: $" + this.retornarValorTotal(),
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    },
+    timer: 2000 
+  })
+
+    setTimeout(() => {
+      this.router.navigate(['/procesar-pago']);
+    }, 3500);
  }
 
 }

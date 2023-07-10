@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Terminales } from 'src/app/Models/Terminales';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrito',
@@ -22,7 +23,8 @@ export class CarritoComponent  implements OnInit {
   } 
 
   clicCarrito(){
-    alert("has agregado N items al carrito")
+    
+  
   }
 
 }

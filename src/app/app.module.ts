@@ -18,7 +18,7 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CrearCuentaComponent } from './componentes/crear-cuenta/crear-cuenta.component';
 import { RecuperarPasswordComponent } from './componentes/recuperar-password/recuperar-password.component';
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
 
 @NgModule({
@@ -45,7 +45,8 @@ import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
