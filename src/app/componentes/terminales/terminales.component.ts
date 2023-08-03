@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
+import { terminalesR3Data, terminalesMiniData } from 'src/app/data/terminalesData';
+import { TerminalesService } from 'src/app/services/terminales.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,90 +12,27 @@ import Swal from 'sweetalert2';
 })
 export class TerminalesComponent implements OnInit {
 
+  //Estos terminales vienen del data ya no los ocuparemos de alli
+  //terminalesR3 = terminalesR3Data
+  //terminalesMini = terminalesMiniData
+
+  //Estas variables se usan para trabajar con los terminales del service
+  terminalesR3!: Terminales[]
+  terminalesMini!: Terminales[]
+
 //agregar router al constructor para usar navigate y redirigir
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private terminalesR3Service: TerminalesService,
+    private terminalesMiniService: TerminalesService) 
+  { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.terminalesR3 = this.terminalesR3Service.obtenerTerminalesR3();
+    this.terminalesMini = this.terminalesMiniService.obtenerTerminalesMini();
 
+  }
 
-   //terminales2: Terminales[] = [ otra forma de colocar array de terminales
-   terminalesR3: Array<Terminales> = [
-    {
-      id: 1,
-      nombre: "Terminal R3",
-      image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 47,
-      precioTerminal: 99000,
-      descripcion: 'Descripcion Terminal R3'
-
-    },
-    {
-      id: 2,
-      nombre: "Terminal R3",
-      image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 15,
-      precioTerminal: 87000,
-      descripcion: 'Descripcion Terminal R3'
-
-    },
-    {
-      id: 3,
-      nombre: "Terminal R3",
-      image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 25,
-      precioTerminal: 97000,
-      descripcion: 'Descripcion Terminal R3'
-
-    },
-    {
-      id: 7,
-      nombre: "Terminal R3",
-      image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 8,
-      precioTerminal: 99500,
-      descripcion: 'Descripcion Terminal R3'
-
-    }
-  ]
-
-  terminalesMini: Array<Terminales> = [
-    {
-      id: 1,
-      nombre: "Terminal Mini",
-      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
-      stock: 27,
-      precioTerminal: 19500,
-      descripcion: 'Descripcion Terminal Mini'
-
-    },
-    {
-      id: 2,
-      nombre: "Terminal Mini",
-      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
-      stock: 10,
-      precioTerminal: 17000,
-      descripcion: 'Descripcion Terminal Mini'
-
-    },
-    {
-      id: 3,
-      nombre: "Terminal Mini",
-      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
-      stock: 19,
-      precioTerminal: 17500,
-      descripcion: 'Descripcion Terminal Mini'
-
-    },
-    {
-      id: 4,
-      nombre: "Terminal Mini",
-      image: 'https://redelcomventas.com/img/MiniPOS.JPG',
-      stock: 4,
-      precioTerminal: 18000,
-      descripcion: 'Descripcion Terminal Mini'
-
-    }
-  ]
 
   eventoComprar(){
 

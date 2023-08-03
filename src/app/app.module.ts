@@ -51,4 +51,12 @@ import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+
+
+
+
+
+  
+}
