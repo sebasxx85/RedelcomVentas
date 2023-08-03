@@ -15,10 +15,12 @@ export class ContactoFormularioComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder
   ){
+    
     this.formularioContacto = fb.group({
 
       email: new FormControl('', [Validators.email,Validators.required]),
-      password: new FormControl('', [Validators.minLength(5),Validators.required]),
+      password: new FormControl('', [Validators.minLength(5),Validators.required, 
+      Validators.pattern('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/')]),
       comentario: new FormControl('',[Validators.minLength(50),Validators.required]),
       radio: new FormControl(false,[Validators.required]),
 
