@@ -20,6 +20,8 @@ import { RecuperarPasswordComponent } from './componentes/recuperar-password/rec
 import { PromocionesComponent } from './componentes/promociones/promociones.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
+import { TerminalesService } from './services/terminales.service';
+import { token, config } from './config';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,11 @@ import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+   // {provide: TerminalesService, useClass: TerminalesService},
+    {provide: token, useValue: config}
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { 

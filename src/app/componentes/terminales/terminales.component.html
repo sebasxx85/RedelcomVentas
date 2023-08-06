@@ -1,4 +1,4 @@
-<app-cabecera ></app-cabecera>
+<app-cabecera></app-cabecera>
 
 <h1 class="text-center titulos">TERMINALES</h1>
 
@@ -12,12 +12,12 @@
         <div class="card-body">
 
           <h3 class="card-text">{{ 'Precio: $'+ terminal.precioTerminal }}</h3>
-          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock:  ' + terminal.stock }}</h3>
-          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
+          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock: ' + terminal.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock: ' + terminal.stock }}</h3>
 
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-success" (click)="eventoComprar()">Agregar Carrito</button>
-         
+
         </div>
       </div>
     </div>
@@ -32,19 +32,22 @@
         <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
         <img [src]="terminal.image" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          
+
           <h3 class="card-text">{{ 'Precio: $'+ terminal.precioTerminal }}</h3>
-          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock:  ' + terminal.stock }}</h3>
-          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock:  ' + terminal.stock }}</h3>
+          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock: ' + terminal.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock: ' + terminal.stock }}</h3>
 
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-success" (click)="eventoComprar()">Agregar Carrito</button>
-          
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<div class="row">
+  <!--<button type="button" class="btn btn-outline-success" (click)="agregarTerminalComp()"
+  >Agregar Terminal</button> -->
+</div>
 <app-paginacion></app-paginacion>
 <app-footer></app-footer>

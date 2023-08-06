@@ -92,7 +92,11 @@ export class TerminalesService {
 
   obtenerTerminalesMini(): Terminales[]{
     return this.terminalesR3Service
+89
+  }
 
+  agregarTerminal(terminal: Terminales){
+    this.terminalesR3Service.push(terminal)
   }
 
 
