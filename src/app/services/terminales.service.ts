@@ -35,10 +35,10 @@ export class TerminalesService {
 
     },
     {
-      id: 7,
+      id: 4,
       nombre: "Terminal R3",
       image: 'https://redelcomventas.com/img/posLogo.jpg',
-      stock: 8,
+      stock: 5,
       precioTerminal: 99500,
       descripcion: 'Descripcion Terminal R3'
 
@@ -59,7 +59,7 @@ export class TerminalesService {
       id: 2,
       nombre: "Terminal Mini",
       image: 'https://redelcomventas.com/img/MiniPOS.JPG',
-      stock: 10,
+      stock: 3,
       precioTerminal: 17000,
       descripcion: 'Descripcion Terminal Mini'
 

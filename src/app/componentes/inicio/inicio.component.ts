@@ -21,13 +21,10 @@ export class InicioComponent implements OnInit{
 
   BotonComprar(){
 
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Se ha agregado el Producto al carrito',
-      showConfirmButton: false,
-      timer: 1500
-    })
+     //usar un nav para renviar al formulario
+     setTimeout(() => {
+      this.router.navigate(['/terminales']);
+    }, 2000);
   }
 
   BotonConsultar(){

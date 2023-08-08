@@ -13,6 +13,9 @@ import Swal from 'sweetalert2';
 })
 export class TerminalesComponent implements OnInit {
 
+  contadorR3: number = 0;
+  contadorMini: number = 0;
+
   //Estos terminales vienen del data ya no los ocuparemos de alli
   //terminalesR3 = terminalesR3Data
   //terminalesMini = terminalesMiniData
@@ -20,6 +23,7 @@ export class TerminalesComponent implements OnInit {
   //Estas variables se usan para trabajar con los terminales del service
   terminalesR3!: Terminales[]
   terminalesMini!: Terminales[]
+  
   //Creamos una nueva variable para usar el token de servicios
   terminalesComponent!: Terminales[]
 
@@ -32,11 +36,12 @@ export class TerminalesComponent implements OnInit {
     //usando el token de servicios
     @Inject(token) private config: configuration
 
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.terminalesR3 = this.terminalesR3Service.obtenerTerminalesR3();
     this.terminalesMini = this.terminalesMiniService.obtenerTerminalesMini();
+
     //usando el token de servicio para obtener la funcion
     this.terminalesComponent = this.config.servicios.terminales.obtenerTerminalesR3()
   }
@@ -55,6 +60,31 @@ export class TerminalesComponent implements OnInit {
     this.terminalesR3Service.agregarTerminal(terminal)
   }
 
+  //Contadores
+  addR3(stock: number) {
+    if (this.contadorR3 < stock) {
+      this.contadorR3++
+    }
+  }
+  
+  disR3() {
+    if (this.contadorR3 > 0) {
+      this.contadorR3--
+    }
+  }
+
+  addMini(stock: number) {
+    if (this.contadorMini < stock) {
+      this.contadorMini++
+    }
+  }
+
+  disMini() {
+    if (this.contadorMini > 0) {
+      this.contadorMini--
+    }
+  }
+
   eventoComprar() {
 
     Swal.fire({
@@ -64,7 +94,6 @@ export class TerminalesComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-
 
     setTimeout(() => {
       this.router.navigate(['/comprar']);
