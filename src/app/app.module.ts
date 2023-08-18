@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
 import { TerminalesService } from './services/terminales.service';
 import { token, config } from './config';
+import { CartObservableComponent } from './componentes/cart-observable/cart-observable.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { token, config } from './config';
     CrearCuentaComponent,
     RecuperarPasswordComponent,
     PromocionesComponent,
-    ProcesarPagoComponent
+    ProcesarPagoComponent,
+    CartObservableComponent
   ],
   imports: [
     BrowserModule,

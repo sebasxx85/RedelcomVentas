@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Terminales } from 'src/app/Models/Terminales';
 import { configuration, token } from 'src/app/config';
 import { terminalesR3Data, terminalesMiniData } from 'src/app/data/terminalesData';
+import { TerminalesObsService } from 'src/app/services/terminales-obs.service';
 import { TerminalesService } from 'src/app/services/terminales.service';
 import Swal from 'sweetalert2';
 
@@ -32,6 +33,9 @@ export class TerminalesComponent implements OnInit {
     private router: Router,
     private terminalesR3Service: TerminalesService,
     private terminalesMiniService: TerminalesService,
+
+    //Servicio con Observables
+    private terminalesObsService: TerminalesObsService,
 
     //usando el token de servicios
     @Inject(token) private config: configuration
@@ -85,7 +89,7 @@ export class TerminalesComponent implements OnInit {
     }
   }
 
-  eventoComprar() {
+  eventoComprar(terminal: Terminales) {
 
     Swal.fire({
       position: 'top-end',
@@ -94,11 +98,15 @@ export class TerminalesComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
+    //trabajamos con el servicio terminales observable
+    this.terminalesObsService.addNewTerminal(terminal)
 
+    //redirecionamos a comprar
+    /*
     setTimeout(() => {
       this.router.navigate(['/comprar']);
     }, 2000);
-
+    */ 
 
   }
 

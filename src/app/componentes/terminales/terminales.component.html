@@ -18,7 +18,7 @@
 
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-danger bg-danger text-white boton" (click)="disR3()">-</button>
-          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar()">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar(terminal)">Agregar Carrito</button>
           <button type="button" class="btn btn-outline-success bg-success text-dark boton" (click)="addR3(terminal.stock)">+</button>
           
         </div>
@@ -44,7 +44,7 @@
 
           <p class="card-text">{{ terminal.descripcion }}</p>
           <button type="button" class="btn btn-outline-danger bg-danger text-white boton" (click)="disMini()">-</button>
-          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar()">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar(terminal)">Agregar Carrito</button>
           <button type="button" class="btn btn-outline-success bg-success text-dark boton" (click)="addMini(terminal.stock)">+</button>
           
         </div>
