@@ -23,5 +23,11 @@ export class CartObservableComponent {
     
   })
 }
+   //crear boton borrar
+   onDeleteTerminal(index: number){
+    //usamos el metodo del service para borrar
+    this.terminalesObsService.deleteTerminal(index)
+
+   }
 
 }

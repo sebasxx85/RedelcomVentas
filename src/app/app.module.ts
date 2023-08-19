@@ -23,6 +23,7 @@ import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago
 import { TerminalesService } from './services/terminales.service';
 import { token, config } from './config';
 import { CartObservableComponent } from './componentes/cart-observable/cart-observable.component';
+import { TotalComponent } from './componentes/total/total.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CartObservableComponent } from './componentes/cart-observable/cart-obse
     RecuperarPasswordComponent,
     PromocionesComponent,
     ProcesarPagoComponent,
-    CartObservableComponent
+    CartObservableComponent,
+    TotalComponent
   ],
   imports: [
     BrowserModule,
