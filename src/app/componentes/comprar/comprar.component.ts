@@ -20,7 +20,8 @@ terminales: Terminales[] = [
     image: 'https://redelcomventas.com/img/posLogo.jpg',
     stock: 20,
     precioTerminal: 97500,
-    descripcion: 'Descripcion Terminal Basico'
+    descripcion: 'Descripcion Terminal Basico',
+    contador: 0
 
   },
   {
@@ -29,7 +30,8 @@ terminales: Terminales[] = [
     image: 'https://redelcomventas.com/img/posLogo.jpg',
     stock: 20,
     precioTerminal: 87500,
-    descripcion: 'Descripcion Terminal 2'
+    descripcion: 'Descripcion Terminal 2',
+    contador: 0
 
   },
   {
@@ -38,7 +40,8 @@ terminales: Terminales[] = [
     image: 'https://redelcomventas.com/img/posLogo.jpg',
     stock: 20,
     precioTerminal: 57500,
-    descripcion: 'Descripcion Terminal 3'
+    descripcion: 'Descripcion Terminal 3',
+    contador: 0
 
   },
   {
@@ -47,7 +50,8 @@ terminales: Terminales[] = [
     image: 'https://redelcomventas.com/img/posLogo.jpg',
     stock: 20,
     precioTerminal: 27500,
-    descripcion: 'Descripcion Terminal 5'
+    descripcion: 'Descripcion Terminal 5',
+    contador: 0
 
   }
 ]

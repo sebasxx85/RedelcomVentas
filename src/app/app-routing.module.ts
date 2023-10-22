@@ -12,8 +12,7 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'terminales', component: TerminalesComponent},
   { path: 'comprar', component: ComprarComponent},
   { path: 'carrito', component: CarritoComponent},
@@ -24,7 +23,6 @@ const routes: Routes = [
   { path: 'recuperar-password', component: RecuperarPasswordComponent},
   { path: 'procesar-pago', component: ProcesarPagoComponent},
   { path: '**', redirectTo: '/home' }
-
 
 ];
 

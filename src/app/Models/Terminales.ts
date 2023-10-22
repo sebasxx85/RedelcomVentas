@@ -5,6 +5,7 @@ export interface Terminales{
     image: string
     stock: number,
     precioTerminal: number,
-    descripcion: string
+    descripcion: string,
+    contador: number
     
 }

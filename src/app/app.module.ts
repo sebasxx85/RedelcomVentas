@@ -24,6 +24,9 @@ import { TerminalesService } from './services/terminales.service';
 import { token, config } from './config';
 import { CartObservableComponent } from './componentes/cart-observable/cart-observable.component';
 import { TotalComponent } from './componentes/total/total.component';
+//Agregando html para consumir api node
+import { HttpClientModule } from '@angular/common/http';
+import { ApiNodeComponent } from './componentes/api-node/api-node.component';
 
 @NgModule({
   declarations: [
@@ -45,14 +48,17 @@ import { TotalComponent } from './componentes/total/total.component';
     PromocionesComponent,
     ProcesarPagoComponent,
     CartObservableComponent,
-    TotalComponent
+    TotalComponent,
+    ApiNodeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
   providers: [
    // {provide: TerminalesService, useClass: TerminalesService},

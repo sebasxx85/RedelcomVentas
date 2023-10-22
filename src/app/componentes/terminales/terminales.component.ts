@@ -14,8 +14,8 @@ import Swal from 'sweetalert2';
 })
 export class TerminalesComponent implements OnInit {
 
-  contadorR3: number = 0;
-  contadorMini: number = 0;
+  //contadorR3: number = 0;
+  //contadorMini: number = 0;
 
   //Estos terminales vienen del data ya no los ocuparemos de alli
   //terminalesR3 = terminalesR3Data
@@ -24,13 +24,15 @@ export class TerminalesComponent implements OnInit {
   //Estas variables se usan para trabajar con los terminales del service
   terminalesR3!: Terminales[]
   terminalesMini!: Terminales[]
-  
+
   //Creamos una nueva variable para usar el token de servicios
   terminalesComponent!: Terminales[]
 
   //agregar router al constructor para usar navigate y redirigir
   constructor(
     private router: Router,
+
+    //creando las variables para usar el servicio
     private terminalesR3Service: TerminalesService,
     private terminalesMiniService: TerminalesService,
 
@@ -50,6 +52,7 @@ export class TerminalesComponent implements OnInit {
     this.terminalesComponent = this.config.servicios.terminales.obtenerTerminalesR3()
   }
 
+  //Mas adelante agregar terminal desde adm modulo dashborad
   agregarTerminalComp() {
     let terminal: Terminales = {
       id: 11,
@@ -57,7 +60,8 @@ export class TerminalesComponent implements OnInit {
       image: "",
       stock: 22,
       precioTerminal: 97.000,
-      descripcion: "nuevo terminal que se agrega"
+      descripcion: "nuevo terminal que se agrega",
+      contador: 0
     }
 
     //llamamos a la funcion agregar terminal en nuestro servicio
@@ -65,27 +69,43 @@ export class TerminalesComponent implements OnInit {
   }
 
   //Contadores
-  addR3(stock: number) {
-    if (this.contadorR3 < stock) {
-      this.contadorR3++
+  addR3(id: number) {
+    let product = this.terminalesR3.find(p => p.id === id);
+
+    if (product) {
+      if (product.contador < product.stock) {
+        product.contador++
+      }
     }
   }
+
+  disR3(id: number) {
+    let product = this.terminalesR3.find(p => p.id === id);
+ 
+    if (product) {
+      if (product.contador > 0) {
+        product.contador--
+      }
+    }
+  }
+
+  addMini(id: number) {
+    let product = this.terminalesMini.find(p => p.id === id);
+
+    if (product) {
+      if (product.contador < product.stock) {
+        product.contador++
+      }
+    }
+  }
+
+  disMini(id: number) {
+    const product = this.terminalesMini.find(p => p.id === id);
   
-  disR3() {
-    if (this.contadorR3 > 0) {
-      this.contadorR3--
-    }
-  }
-
-  addMini(stock: number) {
-    if (this.contadorMini < stock) {
-      this.contadorMini++
-    }
-  }
-
-  disMini() {
-    if (this.contadorMini > 0) {
-      this.contadorMini--
+    if (product) {
+      if (product.contador > 0) {
+        product.contador--
+      }
     }
   }
 
@@ -98,6 +118,7 @@ export class TerminalesComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
+
     //trabajamos con el servicio terminales observable
     this.terminalesObsService.addNewTerminal(terminal)
 
@@ -106,10 +127,9 @@ export class TerminalesComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(['/comprar']);
     }, 2000);
-    */ 
+    */
 
   }
-
 
 
 }

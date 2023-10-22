@@ -3,6 +3,7 @@ import { ContenidoPOSService } from "./services/contenido-pos.service"
 import { TerminalesService } from "./services/terminales.service"
 
 export interface configuration {
+    
     servicios: {
         contenidoPOS: ContenidoPOSService,
         terminales: TerminalesService
